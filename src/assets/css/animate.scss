@@ -1,0 +1,29 @@
+@keyframes hvr-pulse-shrink {
+  to {
+    transform: scale(0.9);
+  }
+}
+
+.hvr-pulse-shrink:hover,
+.hvr-pulse-shrink:focus,
+.hvr-pulse-shrink:active {
+  animation-name: hvr-pulse-shrink;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.hvr-pulse-shake:hover,
+.hvr-pulse-shake:focus,
+.hvr-pulse-shake:active {
+  animation-name: shakeX;
+  animation-duration: 2s;
+}
+
+.hvr-pulse-bounce:hover,
+.hvr-pulse-bounce:focus,
+.hvr-pulse-bounce:active {
+  animation-name: bounce;
+  animation-duration: 1s;
+}

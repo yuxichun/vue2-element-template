@@ -1,0 +1,83 @@
+{
+  "name": "cos-homepage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --mode development",
+    "build": "vue-cli-service build --mode production",
+    "serve:production": "vue-cli-service serve --mode production",
+    "build:serve": "vue-cli-service build --mode development",
+    "serve:stage": "vue-cli-service serve --mode staging",
+    "build:stage": "vue-cli-service build --mode staging",
+    "http:server": "npx http-server ./dist -g -b --cors",
+    "vue:lint": "vue-cli-service lint",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .eslintignore .",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,less,html,vue}\" --ignore-path .stylelintignore",
+    "lint:style:fix": "npm run lint:style -- --fix",
+    "lint:prettier": "prettier --check .",
+    "lint:prettier:fix": "prettier --write --ignore-path .prettierignore . ",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
+    "lintfix": "prettier --write --ignore-path .prettierignore . && npm run lint:js -- --fix && npm run lint:style -- --fix",
+    "stylelint-check": "stylelint-config-prettier-check",
+    "prepare": "husky install",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^0.27.2",
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.9",
+    "normalize.css": "^8.0.1",
+    "register-service-worker": "^1.7.1",
+    "vconsole": "^3.14.6",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@vue/cli-plugin-babel": "~4.5.17",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.17",
+    "@vue/cli-plugin-eslint": "~4.5.17",
+    "@vue/cli-plugin-pwa": "~4.5.17",
+    "@vue/cli-plugin-router": "~4.5.17",
+    "@vue/cli-plugin-unit-jest": "~4.5.17",
+    "@vue/cli-plugin-vuex": "~4.5.17",
+    "@vue/cli-service": "~4.5.17",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "http-server": "^14.1.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^9.5.0",
+    "postcss": "^8.4.14",
+    "postcss-html": "^1.4.1",
+    "postcss-less": "^6.0.0",
+    "postcss-scss": "^4.0.4",
+    "prettier": "^2.2.1",
+    "sass": "~1.32.13",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-order": "^5.0.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "prettier --write",
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "**/*.{css,scss,sass,less,html,vue}": [
+      "stylelint --fix"
+    ]
+  }
+}

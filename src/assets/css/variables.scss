@@ -1,0 +1,229 @@
+// 垂直水平居中
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 垂直居中 水平居左
+
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// 垂直居中 水平居右
+
+.flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+// 垂直居中 左右贴边
+
+.flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 垂直居中 水平均分间距
+
+.flex-space-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+// 垂直水平居中 竖着排列
+
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// 垂直水平居左 竖着排列
+
+.flex-start-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+// 垂直水平居右 竖着排列
+
+.flex-end-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+// 垂直水平居中 上下贴边 竖着排列
+
+.flex-space-between-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// 垂直居中 垂直均分间距 竖着排列
+
+.flex-space-around-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+// 清除浮动
+
+.clearfix {
+  &::before,
+  &::after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+// position定位
+// 垂直居中
+
+.p-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 垂直水平居左
+
+.p-l {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+// 垂直水平居右
+
+.p-r {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+/* 满屏布局 */
+
+.full-pf {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* 一页满屏布局 */
+
+.full-pa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// 上划线
+
+.border-top {
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: inline-block;
+    border-top: 1px solid #979797;
+    transform: scaleY(0.5);
+    transform-origin: 0 100%;
+  }
+}
+
+// 下划线
+
+.border-bottom {
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    border-bottom: 1px solid #979797;
+    transform: scaleY(0.5);
+    transform-origin: 0 100%;
+  }
+}
+
+// 为元素添加 Retina 屏幕下的 2px 边框（即 hairline），基于伪类 transform 实现。
+
+[class*="custom-hairline"] {
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    box-sizing: border-box;
+    border: 0 solid #acacac;
+    transform: scale(0.5);
+    pointer-events: none;
+  }
+}
+
+.custom-hairline {
+  &::after {
+    border-width: 2px;
+  }
+}
+
+.custom-hairline-top {
+  &::after {
+    border-top-width: 2px;
+  }
+}
+
+.custom-hairline-bottom {
+  &::after {
+    border-bottom-width: 2px;
+  }
+}
+
+.custom-hairline-left {
+  &::after {
+    border-left-width: 2px;
+  }
+}
+
+.custom-hairline-right {
+  &::after {
+    border-right-width: 2px;
+  }
+}

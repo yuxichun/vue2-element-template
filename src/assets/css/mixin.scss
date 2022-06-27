@@ -1,0 +1,33 @@
+//flex box
+@mixin flexbox($jc: space-between, $ai: center, $fd: row, $fw: nowrap) {
+  display: flex;
+  flex: 1;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+// 多行隐藏
+@mixin textoverflow($clamp: 1, $display: -webkit-inline-box) {
+  -webkit-box-orient: vertical;
+  display: $display;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // white-space: normal;
+  // word-wrap: break-word;
+  // word-break: break-all;
+  -webkit-line-clamp: $clamp;
+}
+
+// 背景
+@mixin background($image, $position: initial, $size: 100% 100%, $repeat: no-repeat) {
+  background-image: url($image);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+  // background-attachment: initial;
+  // background-origin: initial;
+  // background-clip: initial;
+  // background-color: initial;
+}

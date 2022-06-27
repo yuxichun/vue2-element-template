@@ -1,0 +1,1 @@
+export { screenSyncDoc } from "./app";
