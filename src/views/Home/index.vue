@@ -1,10 +1,11 @@
 <!--  -->
 <template>
-  <div class="">
-    <!-- <el-button type="primary">默认按钮</el-button>
+  <div class="home">
+    <el-button type="primary">默认按钮</el-button>
     <el-button size="medium">中等按钮</el-button>
     <el-button size="small">小型按钮</el-button>
-    <el-button size="mini">超小按钮</el-button> -->
+    <el-button size="mini">超小按钮</el-button>
+    <div class="home-placeholder"></div>
   </div>
 </template>
 
@@ -45,4 +46,10 @@
 
 <style lang="scss" scoped>
   // @import './index.scss'; // 引入当前页面scss类文件
+  .home {
+    &-placeholder {
+      height: 1000px;
+      background-color: rgb(228, 210, 213);
+    }
+  }
 </style>

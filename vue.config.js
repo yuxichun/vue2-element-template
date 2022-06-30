@@ -91,12 +91,11 @@ module.exports = {
   },
   pwa: {
     name: "Cosee|客达达", // name short_name
-    themeColor: "#08c6ad", // theme_color
+    themeColor: "#ffffff", // theme_color
     msTileColor: "#000000", // background_color
     appleMobileWebAppCapable: "yes",
     appleMobileWebAppStatusBarStyle: "black",
     workboxPluginMode: "GenerateSW", // InjectManifest GenerateSW
-
     assetsVersion: "",
     // manifestPath: "",
     manifestOptions: "",
